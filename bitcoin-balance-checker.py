@@ -1,7 +1,4 @@
-#Compatible with Python 2 and Python 3
-#Based and improved implementation, inspired by: github.com/circulosmeos/bitcoin-in-tiny-pieces/blob/master/bitcoin-get-address-balance.py
-
-#Developed by: ~geniusprodigy
+#Developed: lilkdi (~geniusprodigy fixup own)
 #I have implemented and modified so that it is possible to automatically check list-based Bitcoin Addresses to work with massive volumes of scans.
 import sys
 import re
@@ -43,7 +40,7 @@ def check_balance(address):
         try:
             htmlfile = urlopen("https://blockchain.info/address/%s?format=json" % check_address, timeout = 10)
             htmltext = htmlfile.read().decode('utf-8')
-            reading_state  = 0
+            reading_state = 0
         except:
             reading_state+=1
             print( "Checking... " + str(reading_state) )
@@ -86,17 +83,16 @@ def check_balance(address):
 with open("list-addresses.txt") as file:
     for line in file:
 
-    	arq1 = open('addresses-with-balance-yay.txt', 'a')
+    	arq1 = open('pos_bal.txt', 'a')
         address = str.strip(line)
-        print ("__________________________________________________\n")
+        print ("____________________________________________________\n")
         
         check_balance(address)
 
-print "__________________________________________________\n"
-print "Developed by: ~geniusprodigy"
-print "My contact on reddit: reddit.com/u/genius360\n"
-print "If this saved you time or helped, donations please for BTC Address:"
-print "1FrRd4iZRMU8i2Pbffzkac5u4KwUptmc7S"
-arq1 = open('addresses-with-balance-yay.txt', 'a')
-arq1.write("\nDeveloped by: ~geniusprodigy. If this saved you time or helped, donations please for BTC Address: 1FrRd4iZRMU8i2Pbffzkac5u4KwUptmc7S")
+print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+print "supported by: github.com/lilkdi"
+print "If this saved you time, thank me:"
+print "bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf"
+arq1 = open('pos_bal.txt', 'a')
+arq1.write("\nsupported by: github.com/lilkdi. If this saved you time, thank me: bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf")
 arq1.close()
