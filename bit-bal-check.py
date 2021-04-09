@@ -83,16 +83,15 @@ def check_balance(address):
 with open("list.txt") as file:
     for line in file:
 
-    	arq1 = open('pos_bal.txt', 'a');
-    	address = str.strip(line);
-    	print("____________________________________________________\n");
-        
-        check_balance(address)
+    	arq1 = open('pos_bal.txt', 'a')
+    	address = str.strip(line)
+    	print("____________________________________________________\n")
+    	check_balance(address);
 
 print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 print ("supported by: github.com/lilkdi")
 print ("If this saved you time, thank me:")
-print ("bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf")
-arq1 = open('pos_bal.txt', 'a')
-arq1.write("\nsupported by: github.com/lilkdi. If this saved you time, thank me: bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf")
+print ("bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf\n")
+arq1 = open('pos_bal.txt', 'a');
+arq1.write("\nsupported by: github.com/lilkdi. If this saved you time, thank me: bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf");
 arq1.close()
