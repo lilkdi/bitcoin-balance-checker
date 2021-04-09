@@ -80,19 +80,19 @@ def check_balance(address):
                 sleep(WARN_WAIT_TIME)
 
 #Add the filename of your list of Bitcoin Addresses for check all.
-with open("list-addresses.txt") as file:
+with open("list.txt") as file:
     for line in file:
 
-    	arq1 = open('pos_bal.txt', 'a')
-        address = str.strip(line)
-        print ("____________________________________________________\n")
+    	arq1 = open('pos_bal.txt', 'a');
+    	address = str.strip(line);
+    	print("____________________________________________________\n");
         
         check_balance(address)
 
-print "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-print "supported by: github.com/lilkdi"
-print "If this saved you time, thank me:"
-print "bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf"
+print ("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
+print ("supported by: github.com/lilkdi")
+print ("If this saved you time, thank me:")
+print ("bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf")
 arq1 = open('pos_bal.txt', 'a')
 arq1.write("\nsupported by: github.com/lilkdi. If this saved you time, thank me: bc1q0jfa8jvv5fhqxxuqhsfqcr2t9sgpq0ufjrzdqf")
 arq1.close()
